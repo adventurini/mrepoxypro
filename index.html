@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>Epoxy &amp; Concrete Floor Coating in Tampa &amp; St. Petersburg | Mr. Epoxy Pro</title>
 <meta name="description" content="Mr. Epoxy Pro installs flake, metallic, stained &amp; polyaspartic floor coatings across Tampa, St. Petersburg, Clearwater &amp; Palm Harbor. Most floors done in one day. Free estimate: (813) 784-7028.">
@@ -44,6 +44,7 @@
   :root{
     --navy:#242C66;--navy-deep:#1A1F4D;--violet:#6D3BD1;--ink:#1B2030;--muted:#5C6378;
     --bg:#FFFFFF;--soft:#F5F6FB;--line:#E6E8F2;--r:16px;
+    --gutter:22px;
     --ff-display:"Poppins",system-ui,sans-serif;--ff-body:"Inter",system-ui,sans-serif;
   }
   *{box-sizing:border-box}
@@ -51,7 +52,7 @@
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ff-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2,h3{font-family:var(--ff-display);font-weight:800;line-height:1.08;letter-spacing:-.01em;margin:0;color:var(--navy)}
   p{margin:0 0 1em}a{color:inherit;text-decoration:none}img,svg{display:block;max-width:100%}
-  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .wrap{max-width:1160px;margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px));width:100%}
   .eyebrow{font-family:var(--ff-display);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
   .muted{color:var(--muted)}
 
@@ -72,7 +73,7 @@
   .nav-links a{color:var(--ink);opacity:.78}.nav-links a:hover{opacity:1;color:var(--navy)}
   .nav .btn{padding:11px 20px;font-size:14.5px;white-space:nowrap;flex-shrink:0}
   .burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;color:var(--navy);font-size:20px;cursor:pointer;margin-left:auto;flex:none}
-  .mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:8px 22px 16px}
+  .mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:8px var(--gutter) 16px}
   .mobile.open{display:flex}
   .mobile a{padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--ff-display);font-weight:500;color:var(--navy)}
 
@@ -102,7 +103,7 @@
   .success.show{display:block}
 
   .trust{background:var(--soft);border-bottom:1px solid var(--line)}
-  .trust .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;padding:18px 22px}
+  .trust .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;padding-top:20px;padding-bottom:20px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
   .trust .item{display:flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:500;font-size:14.5px;color:var(--navy)}
   .trust .item svg{width:22px;height:22px;color:var(--violet)}
 
@@ -183,34 +184,31 @@
     .why-grid{grid-template-columns:repeat(3,1fr)}
   }
   @media (max-width:660px){
-    .wrap{padding:0 24px}
-    .nav{height:60px;gap:12px}
-    .brand{font-size:16px;gap:8px;flex:1;min-width:0}
-    .brand img{width:38px;height:38px}
+    :root{--gutter:28px}
+    .nav{height:64px;gap:14px}
+    .brand{font-size:17px;gap:10px;flex:1;min-width:0}
+    .brand img{width:40px;height:40px}
     .nav-links{display:none}
     .nav-cta{display:none}
     .burger{display:inline-flex;align-items:center;justify-content:center}
-    .hero-inner{gap:14px;padding:16px 0 20px}
-    .hero-copy .eyebrow{font-size:11px;letter-spacing:.12em}
-    .hero h1{font-size:clamp(24px,6.4vw,30px);margin-top:8px;line-height:1.12}
-    .hero .lede{display:none}
-    .hchips{margin-top:10px;gap:6px}
-    .hchip{font-size:11px;padding:5px 10px}
-    .quote-card{padding:16px 18px;border-radius:16px}
-    .quote-card h2{font-size:19px}
-    .quote-card .sub{font-size:12px;margin:4px 0 10px;line-height:1.35}
-    .field{margin-bottom:7px}
-    .field label{font-size:12px;margin-bottom:3px}
-    .field input,.field select{padding:10px 11px;font-size:14px;border-radius:10px}
-    .row2{gap:8px}
-    .quote-card .btn-block{padding:12px 18px;font-size:14.5px}
-    .reassure{font-size:10.5px;margin-top:7px;line-height:1.35}
+    .hero-inner{gap:28px;padding:36px 0 40px}
+    .hero-copy{padding:0}
+    .hero h1{font-size:clamp(28px,7.5vw,36px);margin-top:12px;line-height:1.1}
+    .hero .lede{display:block;font-size:15px;line-height:1.55;margin-top:14px}
+    .hchips{margin-top:18px;gap:8px}
+    .hchip{font-size:12px;padding:7px 13px}
+    .quote-card{padding:24px 22px;border-radius:18px}
+    .quote-card h2{font-size:22px}
+    .quote-card .sub{font-size:14px;margin:8px 0 18px;line-height:1.5}
+    .field{margin-bottom:14px}
+    .field label{font-size:13px;margin-bottom:6px}
+    .field input,.field select{padding:13px 14px;font-size:16px;border-radius:12px}
+    .row2{grid-template-columns:1fr;gap:0}
+    .quote-card .btn-block{padding:15px 22px;font-size:16px}
+    .reassure{font-size:12px;margin-top:12px;line-height:1.45}
+    .trust .wrap{flex-direction:column;align-items:flex-start;gap:16px;padding-top:22px;padding-bottom:22px;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
     .why-grid,.rev-grid,.steps{grid-template-columns:1fr}
     section{padding:54px 0}.cta-band{padding:26px;flex-direction:column;align-items:flex-start}
-  }
-  @media (max-width:660px) and (max-height:740px){
-    .hchips{display:none}
-    .hero-inner{padding-top:12px}
   }
   @media (prefers-reduced-motion:reduce){html:not(.no-js) .reveal{transform:none}}
 </style>
